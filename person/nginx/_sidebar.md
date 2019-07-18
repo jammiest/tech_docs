@@ -1,0 +1,8 @@
+* [README](/person/nginx/)
+* [Win本地环境搭建](/person/nginx/Win本地环境搭建)
+* [虚拟机本地环境搭建](/person/nginx/虚拟机本地环境搭建)
+* [Nginx变量](/person/nginx/Nginx变量)
+* [Nginx Location](/person/nginx/location)
+* [状态码](/person/nginx/状态码)
+* [条件判断及运算符](/person/nginx/条件判断及运算符)
+* [返回](/person)
