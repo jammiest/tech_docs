@@ -40,7 +40,7 @@ whatis awk gawk dgawk pgawk igawk
 - igawk (1)            - gawk with include files
 ```
 
-不太确信以上结果，我又使用man、info挨个看了一下，结果awk、gawk、dgawk、pgawk都是gawk，在线手册一模一样。唯独igawk与前面四个不太一样，是包含文件的gawk，其实也是gawk。awk是gawk的一个软连接，大家都是gawk！
+不太确信以上结果，我又使用`man、info`挨个看了一下，结果`awk`、`gawk`、`dgawk`、`pgawk`都是`gawk`，在线手册一模一样。唯独`igawk`与前面四个不太一样，是包含文件的`gawk`，其实也是`gawk`。`awk`是`gawk`的一个软连接，大家都是`gawk`！
 
 ## awk的使用
 
@@ -80,7 +80,8 @@ BEGIN语句块的语法：
 BEGIN {awk-commands}
 ```
 
-BEGIN语句块在程序开始的使用执行，只执行一次，在这里可以初始化变量。BEGIN是AWK的关键字，因此它必须为大写。  
+BEGIN语句块在程序开始的使用执行，只执行一次，在这里可以初始化变量。BEGIN是AWK的关键字，因此它必须为大写。
+
 !> 注意，这个语句块是可选的。
 
 **BODY** 语句块
@@ -91,8 +92,8 @@ BODY语句块的语法:
 /pattern/ {awk-commands}
 ```
 
+BODY语句块中的命令会对输入的每一行执行，也可以通过提供模式来控制这种行为。
 
-BODY语句块中的命令会对输入的每一行执行，也可以通过提供模式来控制这种行为。  
 !> 注意，BODY语句块没有关键字。
 
 **END** 语句块
