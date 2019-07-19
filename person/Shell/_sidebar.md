@@ -6,6 +6,7 @@
   * [Awk](/person/Shell/Awk)
   * [vim常用命令](/person/Shell/vim常用命令)
   * [History](/person/Shell/History)
+  * [Kill&Killall](/person/Shell/Kill&Killall)
   * [Curl](/person/Shell/Curl)
   * [Shell脚本趣玩算法](/person/Shell/Shell脚本趣玩算法)
   * [Shell运算及统计](/person/Shell/Shell运算及统计)
