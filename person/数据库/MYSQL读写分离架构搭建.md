@@ -97,17 +97,22 @@ server-id=244
 
 > 然后重启所有服务器（VM0,VM1,VM3,VM3）
 
-3、master服务器（VM0）
+3、salve服务器（VM1,VM3,VM3）
 
-```mysql
+```sql
 -- 刷新所有表以及阻止写操作
 FLUSH TABLES WITH READ LOCK;
 
+```
+
+4、master服务器（VM0）
+
+```mysql
 -- 查看log文件名和位置
 SHOW MASTER STATUS;
 ```
 
-4、进入slave的MYSQL server命令行，通过执行`mysql -u root -p`
+5、进入slave的MYSQL server命令行，通过执行`mysql -u root -p`
 
 ```sql
 -- 关闭和重置主从同步，首次配置可省略这两步骤
@@ -131,8 +136,7 @@ show slave status;
 
 ```
 
-
-5、创建主库的远程管理账号以及权限 VM0
+6、创建主库的远程管理账号以及权限 VM0
 
 ```sql
 CREATE USER 'admin'@'192.168.%' IDENTIFIED BY 'Admin123!';
@@ -140,7 +144,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, INDEX, ALTER, SUPER,
 FLUSH PRIVILEGES;
 ```
 
-6、创建从库的远程管理账号以及权限 VM1 VM2 VM3  
+7、创建从库的远程管理账号以及权限 VM1 VM2 VM3  
 **为兼容更多框架MYSQL读写分离架构的语法特点，故采取保持主从库账号以及密码一致性，仅对权限不同区分**
 
 ```sql

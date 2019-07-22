@@ -1,7 +1,7 @@
 * [PHP](/person/PHP/)
 * [数据库](/person/数据库/)
 * [Redis](/person/Redis/)
-* [nginx](/person/nginx/)
+* [Nginx](/person/nginx/)
 * [GIT](/person/GIT/)
 * [算法](/person/Algorithm/)
 * [Python](/person/Python/)
