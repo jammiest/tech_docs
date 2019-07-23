@@ -88,6 +88,8 @@ server-id=1
 log-bin=mysql-bin
 ```
 
+!> 设置完成这步，重启之后mysql之后执行SQL语句`SHOW MASTER STATUS;`或者`SHOW BINARY LOGS;`可看到一条记录，如果没有，请确认你的配置是否生效
+
 > slave服务器
 
 ```ini
