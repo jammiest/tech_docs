@@ -1,5 +1,6 @@
 * [PHP](/person/PHP/)
 * [数据库](/person/数据库/)
+* [文件服务](/person/文件服务/)
 * [Redis](/person/Redis/)
 * [Nginx](/person/nginx/)
 * [GIT](/person/GIT/)
