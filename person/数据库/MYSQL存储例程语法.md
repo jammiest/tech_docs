@@ -143,7 +143,51 @@ simple_expr:
 - `case_expr`
 - `interval_expr`
 
+## BEGIN ... END 复合语句
 
+```sql
+[begin_label:] BEGIN
+    [statement_list]
+END [end_label]
+```
+
+`BEGIN ... END`语法结构被作为复合语句，支持在**存储过程**，**存储函数**，**触发器**等SQL编程语法语言中，一个复合型语句支持多条SQL语句的执行，包含在`BEGIN`和`END`关键词当中,*statement_list* 表示一条或者多条语句，每一条语句都是以分号(`;`)为分隔，*statement_list* 本身是合法的，即不包含任何内容的 `BEGIN ... END` 是合法的。
+
+?> `BEGIN ... END`语法是可嵌套的  
+`BEGIN ... END`可以通过*begin_label* 或 *end_label* 进行打标签
+
+!> 多条SQL语句是被`;`分隔，在命令行模式需要借助`delimiter`指令
+
+## LABLE（标签）语法
+
+```sql
+[begin_label:] BEGIN
+    [statement_list]
+END [end_label]
+
+[begin_label:] LOOP
+    statement_list
+END LOOP [end_label]
+
+[begin_label:] REPEAT
+    statement_list
+UNTIL search_condition
+END REPEAT [end_label]
+
+[begin_label:] WHILE search_condition DO
+    statement_list
+END WHILE [end_label]
+```
+
+`BEGIN...END`、`LOOP`、`REPEAT`、`WHILE`结构支持标签，遵循如下规则：
+
+- *begin_label* 必须跟着冒号`:`.
+- *begin_label* 可以没有对应的 *end_label*结束标签. 如果*end_label*给出, 必须保持和*begin_label*一致。
+- 有*end_label*必定有*begin_label*。
+- 同一层级的标签名不重复
+- 标签最长为16字符
+
+> 标签主要作用， 能够为`ITERATE`，`LEAVE`语法提供流程控制。
 
 ## 流程控制语句
 

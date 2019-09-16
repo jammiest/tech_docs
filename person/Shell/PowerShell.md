@@ -46,4 +46,7 @@ $header = @{
  "Content-Type"="application/json"
 } 
 $content = Invoke-WebRequest -Uri http://card.juooo5.com/Cardproduct/getDiscountScheduleList -Method POST -Body $body -Headers $header | Select-Object Content
+
+# 一条命令请求接口，并打印到控制台
+$Content = Invoke-WebRequest -Uri http://www.s2.com/service/card?is_debug=1 -Method Post -Body @{method="test";params="{}"} | Select-Object Content ; $Content.Content | ConvertFrom-Json | ConvertTo-Json
 ```
