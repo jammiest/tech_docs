@@ -15,6 +15,7 @@ VM3（作为SLAVE）:192.168.0.243
 1、安装MySQL官方的RPM文件[MySQL Yum Repository](https://dev.mysql.com/downloads/repo/yum/)并且安装
 
 > CentOS是EL7架构的，因此选择'Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architecture Independent), RPM Package'，通过以下命令查看
+
 ```bash
 uname -a
 ```  
@@ -27,11 +28,12 @@ wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
 # 安装RPM package
 sudo yum localinstall mysql80-community-release-el7-1.noarch.rpm
 ```
+
 2、安装完成RPM包，可以查看默认可安装的MYSQL版本，通过执行命令
 
 ```bash
 yum repolist enabled | grep "mysql.*-community.*"
-``` 
+```
 
 3、查看所有支持安装的MYSQL版本，通过执行命令`yum repolist all | grep mysql`  
 4、切换MYSQL server默认版本为5.7  
@@ -71,6 +73,7 @@ systemctl stop firewalld
 ## 主从设置
 
 1、进入VM0，新增同步账号以及设置相应权限
+
 ```sql
 -- 创建专门用于主从同步的MYSQL账号，用户名repl，密码password，允许访问的IP地址192.168.0.%（%为通配符）
 CREATE USER 'repl'@'192.168.0.%' IDENTIFIED BY 'Repl123!';
