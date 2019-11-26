@@ -5,4 +5,5 @@
 * [Nginx Location](/person/nginx/location)
 * [状态码](/person/nginx/状态码)
 * [条件判断及运算符](/person/nginx/条件判断及运算符)
+* [Nginx负载均衡](/person/nginx/Nginx负载均衡)
 * [返回](/person)
