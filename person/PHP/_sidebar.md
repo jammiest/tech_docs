@@ -2,4 +2,5 @@
 * [PHP7.3.5编译](/person/PHP/PHP7.3.5编译.md)
 * [PHP杂项](/person/PHP/PHP杂项)
 * [Laravel.消息队列](/person/PHP/Laravel.消息队列)
+* [RabbitMQ](/person/PHP/RabbitMQ)
 * [返回](/)
