@@ -10,7 +10,7 @@
 * [正则](/person/正则/)
 * [Shell](/person/Shell/)
 * [OS](/person/OS/)
-* [虚拟化](/person/虚拟化/)
+* [Docker](/person/Docker/)
 * [测试运维](/person/测试运维/)
 * [架构](/person/架构/)
 * [ELK](/person/ELK/)
