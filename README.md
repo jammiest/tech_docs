@@ -43,12 +43,12 @@ server {
 
 ## Github目录导航
 
-- [PHP](https://github.com/jammiest/tech_docs/blob/master/person/php/README.md)
-  - [README](https://github.com/jammiest/tech_docs/blob/master/person/php/README.md)
-  - [PHP7.3.5编译](https://github.com/jammiest/tech_docs/blob/master/person/php/PHP7.3.5编译.md)
-  - [PHP杂项](https://github.com/jammiest/tech_docs/blob/master/person/php/PHP杂项.md)
-  - [Laravel.消息队列](https://github.com/jammiest/tech_docs/blob/master/person/php/Laravel.消息队列.md)
-  - [RabbitMQ](https://github.com/jammiest/tech_docs/blob/master/person/php/RabbitMQ.md)
+- [PHP](https://github.com/jammiest/tech_docs/blob/master/person/PHP/README.md)
+  - [README](https://github.com/jammiest/tech_docs/blob/master/person/PHP/README.md)
+  - [PHP7.3.5编译](https://github.com/jammiest/tech_docs/blob/master/person/PHP/PHP7.3.5编译.md)
+  - [PHP杂项](https://github.com/jammiest/tech_docs/blob/master/person/PHP/PHP杂项.md)
+  - [Laravel.消息队列](https://github.com/jammiest/tech_docs/blob/master/person/PHP/Laravel.消息队列.md)
+  - [RabbitMQ](https://github.com/jammiest/tech_docs/blob/master/person/PHP/RabbitMQ.md)
 - [数据库](https://github.com/jammiest/tech_docs/blob/master/person/数据库/README.md)
   - [README](https://github.com/jammiest/tech_docs/blob/master/person/数据库/README.md)
   - [MYSQL主从架构搭建](https://github.com/jammiest/tech_docs/blob/master/person/数据库/MYSQL主从架构搭建.md)
