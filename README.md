@@ -116,9 +116,9 @@ server {
   - [PowerShell](https://github.com/jammiest/tech_docs/blob/master/person/Shell/PowerShell)
 
 - [OS](https://github.com/jammiest/tech_docs/blob/master/person/OS/)
-  - [README](https://github.com/jammiest/tech_docs/blob/master/person/Linux/README)
-  - [系统时间管理](https://github.com/jammiest/tech_docs/blob/master/person/Linux/系统时间管理)
-  - [crontab](https://github.com/jammiest/tech_docs/blob/master/person/Linux/crontab)
+  - [README](https://github.com/jammiest/tech_docs/blob/master/person/OS/Linux/README)
+  - [系统时间管理](https://github.com/jammiest/tech_docs/blob/master/person/OS/Linux/系统时间管理)
+  - [crontab](https://github.com/jammiest/tech_docs/blob/master/person/Linux/OS/crontab)
   - [Win10常见功能开启](https://github.com/jammiest/tech_docs/blob/master/person/Win/Win10常见功能开启)
   - [Win10开机启动脚本](https://github.com/jammiest/tech_docs/blob/master/person/Win/Win10开机启动脚本)
 
