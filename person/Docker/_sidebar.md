@@ -7,6 +7,7 @@
   * [6.Nginx容器构建](/person/Docker/Nginx容器构建)
   * [7.Nginx容器支持FastDFS模块](/person/Docker/Nginx容器支持FastDFS模块)
   * [8.FastDFS容器构建](/person/Docker/FastDFS容器构建)
+  * [9.Composefile语法](/person/Docker/Composefile语法)
 * VMware
   * [README](/person/Docker/VMware/)
   * [扩容](/person/Docker/VMware/VMware扩容)
