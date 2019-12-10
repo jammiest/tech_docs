@@ -1,4 +1,4 @@
-# Docker基本指令预览
+# Dockerfile语法
 
 ## FROM
 
