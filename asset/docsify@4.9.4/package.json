@@ -38,7 +38,7 @@
     "logo": "https://docsify.js.org/_media/icon.svg"
   },
   "dependencies": {
-    "marked": "^0.5.1",
+    "marked": "^1.1.1",
     "medium-zoom": "^0.4.0",
     "opencollective": "^1.0.3",
     "prismjs": "^1.15.0",
