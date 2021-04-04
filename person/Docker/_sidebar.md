@@ -11,4 +11,5 @@
 * VMware
   * [README](/person/Docker/VMware/)
   * [扩容](/person/Docker/VMware/VMware扩容)
+* [本地服务器IP设置](/person/Docker/本地服务器IP设置)
 * [README](/person/)

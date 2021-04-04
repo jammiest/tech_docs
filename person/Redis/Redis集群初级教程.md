@@ -16,4 +16,21 @@
 !> `命令端口`和 `集群总线`总是差10000个端口号
 
 !> Redis集群正常运作需要保证满足一下情况：
-- 
+
+
+
+## 其他常用操作 
+
+### 集群重新初始化
+
+#### 1、杀死已有redis进程
+
+```shell
+ps -aux | grep [r]edis | awk '{ print $2 }' | xargs kill
+```
+
+#### 2、删除原有自动生成文件和目录
+
+```shell
+rm -rf appendonly.aof dump.rdb node*.conf
+```
