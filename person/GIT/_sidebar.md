@@ -6,6 +6,6 @@
   * [PowerShell Git配置](/person/GIT/PowerShell)
   * [commitizen规范化提交](/person/GIT/commitizen)
   * [钩子](/person/GIT/钩子)
-  * [仓库](/person/GIT/Repository（仓库）)
-  * 
-* [返回](/)
+  * [仓库管理](/person/GIT/Repository（仓库）)
+  * [Repo工具](/person/GIT/Repo)
+* [返回](/ )

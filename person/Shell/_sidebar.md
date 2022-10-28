@@ -8,6 +8,7 @@
   * [History](/person/Shell/History)
   * [Kill&Killall](/person/Shell/Kill&Killall)
   * [Curl](/person/Shell/Curl)
+  * [输出重定向](/person/Shell/std_redirect)
   * [Shell脚本趣玩算法](/person/Shell/Shell脚本趣玩算法)
   * [Shell运算及统计](/person/Shell/Shell运算及统计)
   * [Shell编程大全](/person/Shell/Shell编程大全)

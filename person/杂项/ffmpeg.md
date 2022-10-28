@@ -87,3 +87,16 @@ D:\> ffmpeg -f concat -i list.txt -c copy dst.mp4
 file ./src1.mp4
 file ./src2.mp4
 ```
+
+## 将MP4转为m3u8文件
+
+## 高级用法
+## hls
+
+将in.mkv转化为hls格式的文件
+
+```ffmpeg -i in.mkv -c:v h264 -flags +cgop -g 30 -hls_time 1 out.m3u8```
+
+> 这个例子将生成播放列表文件`out.m3u8`和分片文件`out0.ts`, `out1.ts`, `out2.ts`, 等.
+
+另请参阅段复用器，它提供了更通用和更灵活的分段器实现，可用于执行 HLS 分段。

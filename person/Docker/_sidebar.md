@@ -8,6 +8,10 @@
   * [7.Nginx容器支持FastDFS模块](/person/Docker/Nginx容器支持FastDFS模块)
   * [8.FastDFS容器构建](/person/Docker/FastDFS容器构建)
   * [9.Composefile语法](/person/Docker/Composefile语法)
+  * [10.HLS容器构建](/person/Docker/HLS容器构建.md)
+  * [11.Network网络管理](/person/Docker/Network网络管理.md)
+  * [12.Virtualbox文件权限不足问题问题](/person/Docker/Virtualbox文件权限不足问题问题)
+  * 
 * VMware
   * [README](/person/Docker/VMware/)
   * [扩容](/person/Docker/VMware/VMware扩容)

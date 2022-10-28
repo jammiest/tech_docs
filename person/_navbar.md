@@ -14,3 +14,4 @@
 * [测试运维](/person/测试运维/)
 * [架构](/person/架构/)
 * [ELK](/person/ELK/)
+* [杂项](/person/杂项/)

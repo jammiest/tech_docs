@@ -9,7 +9,8 @@
 
   <link rel="stylesheet" href="./asset/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="./asset/mermaid/dist/mermaid.min.css">
-  <link rel="stylesheet" href="./asset/katex@0.10.0-alpha/katex.min.css">
+  <!-- <link rel="stylesheet" href="./asset/katex@0.10.0-alpha/katex.min.css"> -->
+  <link rel="stylesheet" href="./asset/katex@0.16.0/katex.min.css">
   
   <style>.katex { font-size: 1.2em; }</style>
 </head>
@@ -53,7 +54,8 @@
 <script src="./asset/docsify-copy-code@2.1.0/dist/docsify-copy-code.min.js"></script>
 <script src="./asset//mermaid/dist/mermaid.min.js"></script>
 <script src="./asset/docsify@4.9.4/lib/plugins/zoom-image.js"></script>
-<script src="./asset/katex@0.10.0-alpha/katex.min.js"></script>
+<!-- <script src="./asset/katex@0.10.0-alpha/katex.min.js"></script> -->
+<script src="./asset/katex@0.16.0/katex.min.js"></script>
 <script src="./asset/docsify@4.9.4/lib/plugins/emoji.js"></script>
 <script>
 
@@ -73,23 +75,50 @@
     };
     console.log(window.$docsify.plugins)
     
-/*   window.$docsify.plugins = [
+    window.$docsify.plugins = [
     function (hook) {
       hook.beforeEach(function (content) {
-        return content.replace(/\$\$([\s\S]*?)\$\$/g, function (m, code) {
-          return katex.renderToString(code)
-        })
-      })
-    }
-  ]; */
 
-    window.$docsify.plugins.push(function (hook) {
-        hook.beforeEach(function (content) {
-          return content.replace(/\$\$([\s\S]*?)\$\$/g, function (m, code) {
-            return katex.renderToString(code)
-          })
+        return content.replace(/\$\$([\s\S]*?)\$\$/g, function (m, code) {
+          // console.log(code)
+          code = code.replaceAll('"', '&#34;'); // 双引号转义 '"'
+          code = code.replaceAll('\'', '&#39;'); // 单引号转义 '''
+          code = code.replaceAll('*', '&#42;'); // 星号转义 *
+          code = code.replaceAll(' ', '&#32;'); // 空格转义空白符
+          code = code.replaceAll('`', '&#96;'); // 转义开单引号
+
+          // code = code.replace(/&#{\d+};/g,(m,c) => {
+          //   console.log([m,c])
+          //   return c
+          // })
+
+          return '$$'+code+'$$'
         })
       });
+
+      hook.afterEach(function (html, next) {
+
+        html = html.replace(/\$\$([\s\S]*?)\$\$/g, function (m, code) {
+          console.log(code)
+          
+          // code = code.replaceAll('&#92;', '\\') //还原 \
+          code = code.replaceAll('&#96;', '`') //还原开单引号
+          code = code.replaceAll('&#32;', ' ') //还原空白符
+          code = code.replaceAll('&#42;', '*') //还原 *
+          code = code.replaceAll('&#39;', '\'') //还原 '
+          code = code.replaceAll('&#34;', '"') //还原 '
+
+          console.log(code)
+          return katex.renderToString(code)
+        })
+          // 解析成 html 后调用。
+          // beforeEach 和 afterEach 支持处理异步逻辑
+          // ...
+          // 异步处理完成后调用 next(html) 返回结果
+          next(html);
+        });
+    }
+  ];
 </script>
 </body>
 </html>
