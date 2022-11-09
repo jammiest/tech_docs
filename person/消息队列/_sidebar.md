@@ -1,5 +1,5 @@
 * [README](/person/消息队列/)
+* [RabbitMQ](/person/消息队列/RabbitMQ)
 * [RabbitMQ基础概念(一)](/person/消息队列/RabbitMQ基础概念(一))
 * [RabbitMQ高级特性(二)](/person/消息队列/RabbitMQ高级特性(二))
 * [RabbitMQ生产端保证消息100%投递成功](/person/消息队列/RabbitMQ生产端保证消息100投递成功)
-* [返回](/person)

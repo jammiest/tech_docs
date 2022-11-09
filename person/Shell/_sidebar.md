@@ -16,4 +16,3 @@
   * [Shell脚本配色](/person/Shell/Shell脚本配色)
 * Windows
   * [PowerShell](/person/Shell/PowerShell)
-* [返回](/person/)

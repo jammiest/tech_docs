@@ -17,9 +17,9 @@ abs https压测工具
 - `-v verbosity`    verbosity 要打印多少个疑难解答信息，设置详细级别 - 4和以上打印标题信息，3和以上打印响应代码（404,200等），2和以上打印警告和信息。
 - `-w`              以HTML表的格式输出结果。默认时，它是白色背景的两列宽度的一张表。
 - `-i`              执行HEAD请求，而不是GET。
-- -`x attributes`   用作\<table\>的属性的字符串。 属性被插入\<table here\>。
-- -`y attributes`   用作\<tr\>的属性的字符串。
-- -`z attributes`   用作\<td\>的属性的字符串。
+- -`x attributes`   插入字符串作为table标签的属性。
+- -`y attributes`   插入字符串作为tr标签的属性。
+- -`z attributes`   插入字符串作为td标签的属性。
 - `-C attribute`    将cookie添加到请求。 参数通常采用名称=值对的形式。 这个字段是可重复的。
 - `-H attribute`    例如 ‘Accept-Encoding: gzip’ 插入所有普通标题行之后   -A attribute   添加基本的WWW认证，该属性是一个冒号分隔的用户名和密码，auth-username:password   -P attribute     添加基本代理验证，属性是一个冒号分隔的用户名和密码，proxy-auth-username:password   -X proxy:port   使用代理服务器和端口号。
 - `-A attribute`    对服务器提供BASIC认证信任。用户名和密码由一个:隔开，并以base64编码形式发送。无论服务器是否需要(即,是否发送了401认证需求代码)，此字符串都会被发送。
@@ -62,4 +62,3 @@ abs额外参数
 执行结果
 
 ![abs压测结果2](abs压测结果2.png)
-
