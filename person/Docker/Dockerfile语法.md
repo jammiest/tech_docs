@@ -43,7 +43,7 @@ RUN echo $VERSION > image_version
 - `RUN <command>`
 - `RUN ["executable", "param1", "param2"]`
 
-## `CMD`
+## CMD
 
 语法
 
