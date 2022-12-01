@@ -10,6 +10,7 @@
   * [9.HLS容器构建](/person/Docker/HLS容器构建.md)
   * [10.Network网络管理](/person/Docker/Network网络管理.md)
   * [11.Virtualbox文件权限不足问题问题](/person/Docker/Virtualbox文件权限不足问题问题)
+  * [12.Docker维护管理](/person/Docker/Docker维护管理)
   * 
 * 虚拟机
   * [README](/person/Docker/虚拟机/)

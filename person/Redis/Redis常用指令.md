@@ -5,18 +5,27 @@
 > 官方中文文档：<http://www.redis.cn/documentation.html>  
 > 中文文档[腾讯]：<https://cloud.tencent.com/developer/doc/1203>
 
-- select dbname ：选择数据库
-- keys * ：查出redis数据库中所有 数据类型的数据
-- exsits key ：查询这个key是否存在
+## 常用命令
+
+- keys *：查出redis数据库中所有 数据类型的数据
+- exsits key：查询这个key是否存在
 - rename key key1：将key修改为key1（修改key的名字）
 - type key：返回这个key的数据类型
-- expire key seconds： 设置这个key的生存时间
-- ttl key ： 查看这个key的剩余生存时间
-- persist key ： 清除这个key的生存时间（永久化一个key）
-- del key ：删除这个key，可以是任何类型
+- expire key seconds：设置这个key的生存时间
+- ttl key：查看这个key的剩余生存时间
+- persist key： 清除这个key的生存时间（永久化一个key）
+- del key：删除这个key，可以是任何类型
 - randomkey：随机返回数据库中一个key
-- quit ：退出redis客户端
-- ctrl+c：强制退出redis客户端
+
+## 连接Redis
+
+> redis-cli连接Redis服务器 `redis-cli [-h hostname] [-p port] [-a password]`
+
+- auth password：验证服务器命令
+- echo message: 回显输入的字符串
+- ping：Ping 服务器
+- quit: 强制退出redis客户端
+- select dbname：选择数据库
 
 ## String字符串类型
 

@@ -9,10 +9,10 @@
   * [Kill&Killall](/person/Shell/Kill&Killall)
   * [Curl](/person/Shell/Curl)
   * [输出重定向](/person/Shell/std_redirect)
-  * [Shell脚本趣玩算法](/person/Shell/Shell脚本趣玩算法)
-  * [Shell运算及统计](/person/Shell/Shell运算及统计)
-  * [Shell编程大全](/person/Shell/Shell编程大全)
   * [BashShell配置](/person/Shell/BashShell配置)
   * [Shell脚本配色](/person/Shell/Shell脚本配色)
+  * [Shell编程大全](/person/Shell/Shell编程大全)
+  * [Shell脚本示例-趣玩算法](/person/Shell/Shell脚本示例-趣玩算法)
+  * [Shell脚本示例-部署git代码](/person/Shell/Shell脚本示例-部署git代码)
 * Windows
   * [PowerShell](/person/Shell/PowerShell)
