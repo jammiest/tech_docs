@@ -1,4 +1,5 @@
 * [README](/person/PHP/)
+* [Composer自动加载PSR-0及PSR-4](/person/PHP/Composer自动加载PSR-0及PSR-4)
 * [PHP7.3.5编译](/person/PHP/PHP7.3.5编译.md)
 * [PHP杂项](/person/PHP/PHP杂项)
 * [Xdebug远程调试](/person/PHP/Xdebug远程调试)
