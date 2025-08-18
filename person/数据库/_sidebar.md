@@ -5,4 +5,6 @@
   * [存储例程语法](/person/数据库/MYSQL存储例程语法)
   * [事务](/person/数据库/MYSQL事务)
   * [MYSQL错误码和信息](/person/数据库/MYSQL错误码和信息)
+  * [NoSQL](/person/数据库/NoSQL概要)
+  * [术语](/person/数据库/术语)
 * [返回](/)

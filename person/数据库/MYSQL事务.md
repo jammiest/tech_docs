@@ -21,16 +21,25 @@ ACID (`A`: atomicity,`C`: consistency,`I`: isolation,`D`: durability)
 
 | 事务隔离级别                    | 脏读 | 不可重复读 | 幻读 |
 | ------------------------------- | ---- | ---------- | ---- |
-| `READ UNCOMMITTED` **未提交读** | 是   | 是         | 是   |
-| `READ COMMITTED` **已提交读**   | 否   | 是         | 是   |
-| `REPEATABLE READ` **可重复读**  | 否   | 否         | 是   |
-| `SERIALIZABLE` **可串行化**     | 否   | 否         | 否   |
+| `READ UNCOMMITTED` **未提交读** | √   | √         | √   |
+| `READ COMMITTED` **已提交读**   | ×   | √         | √   |
+| `REPEATABLE READ` **可重复读**  | ×   | ×         | √ (标准) / ≈× (InnoDB)   |
+| `SERIALIZABLE` **可串行化**     | ×   | ×         | ×   |
 
 - **脏读**：`事务A`读取了`事务B`更新的数据，然后`事务B`回滚操作，那么`事务A`读取到的数据是脏数据
 - **不可重复读**：`事务B`在`事务A`多次读取同一数据的过程中，对数据作了更新并提交，导致`事务A`读取同一数据结果不一致。
 - **幻读**：系统管理员A将数据库中所有学生的成绩从具体分数改为ABCDE等级，但是系统管理员B就在这个时候插入了一条具体分数的记录，当系统管理员A改结束后发现还有一条记录没有改过来，就好像发生了幻觉一样，这就叫幻读。
 
-?> `READ UNCOMMITTED`是InnoDB的默认事务隔离级别
+?> MySQL InnoDB 存储引擎的默认隔离级别是 REPEATABLE READ。可以通过以下命令查看：MySQL 8.0 之前：SELECT @@tx_isolation;MySQL 8.0 及之后：SELECT @@transaction_isolation;
+
+```shell
+mysql> SELECT @@transaction_isolation;
++-------------------------+
+| @@transaction_isolation |
++-------------------------+
+| REPEATABLE-READ         |
++-------------------------+
+```
 
 #### 系统配置隔离级别
 
@@ -77,3 +86,14 @@ SET SESSION tx_isolation='SERIALIZABLE';
 - 隔离级别越高，越能保证数据的完整性和一致性，但是对并发性能的影响也越大。
 - 事务隔离级别为**读提交时**，写数据只会锁住相应的行
 - 事务隔离级别为**串行化时**，读写数据都会锁住整张表
+
+
+## 事务操作SQL
+`START TRANSACTION |BEGIN`：显式地开启一个事务。
+
+`COMMIT`：提交事务，使得对数据库做的所有修改成为永久性。
+
+`ROLLBACK`：回滚会结束用户的事务，并撤销正在进行的所有未提交的修改。
+
+## 解决幻读的方法
+解决幻读的方式有很多，但是它们的核心思想就是一个事务在操作某张表数据的时候，另外一个事务不允许新增或者删除这张表中的数据了。解决幻读的方式主要有以下几种：将事务隔离级别调整为 SERIALIZABLE 。在可重复读的事务级别下，给事务操作的这张表添加表锁。在可重复读的事务级别下，给事务操作的这张表添加 Next-key Lock（Record Lock+Gap Lock）。
