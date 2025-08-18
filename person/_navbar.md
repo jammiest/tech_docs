@@ -3,7 +3,7 @@
 * [数据库](/person/数据库/)
 * [消息队列](/person/消息队列/)
 * [文件服务](/person/文件服务/)
-* [Redis](/person/Redis/)
+* [NoSQL](/person/NoSQL/)
 * [Nginx](/person/nginx/)
 * [GIT](/person/GIT/)
 * [算法](/person/Algorithm/)
