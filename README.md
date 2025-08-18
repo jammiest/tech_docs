@@ -2,7 +2,6 @@
 
 ## 文档在线预览
 
- - <http://tech.03pl.com/#/>
  - <https://jammiest.github.io/tech_docs/#/>
 
 
