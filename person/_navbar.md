@@ -2,7 +2,6 @@
 * [PHP](/person/PHP/)
 * [数据库](/person/数据库/)
 * [中间件](/person/中间件/)
-* [文件服务](/person/文件服务/)
 * [NoSQL](/person/NoSQL/)
 * [Nginx](/person/nginx/)
 * [GIT](/person/GIT/)
