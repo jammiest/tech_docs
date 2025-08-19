@@ -95,9 +95,11 @@ server {
   - [README](person/Algorithm/README.md)
   - [散列表](person/Algorithm/Hash.md)
   
-- [Python](person/Python/README.md)
-  - [README](person/Python/README.md)
-  - [RabbitMQ](person/Python/RabbitMQ.md)
+- [编程](person/编程/README.md)
+  - [PHP](person/编程/PHP语法速记.md)
+  - [go](person/编程/go语法速记.md)
+  - [Python](person/编程/Python语法速记.md)
+  - [C++](person/编程/CPP语法速记.md)
 
 - [正则](person/正则/README.md)
   - [正则语法](person/正则/正则语法.md)
