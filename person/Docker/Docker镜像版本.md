@@ -184,5 +184,3 @@ radarChart
        net.core.somaxconn: '1024'
        vm.swappiness: '10'
    ```
-
-需要补充特定场景的详细测试数据（如K8s调度性能、ARM架构差异等）可随时告知！
