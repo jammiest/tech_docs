@@ -2,7 +2,7 @@
   * [README](/person/Docker/)
   * [基本指令预览](/person/Docker/基本指令预览)
   * [高频操作](/person/Docker/高频操作)
-  * [Docker镜像版本](/person/Docker/Docker镜像版本1)
+  * [Docker镜像版本](/person/Docker/Docker镜像版本)
   * [Dockerfile语法](/person/Docker/Dockerfile语法)
   * [Docsify容器构建](/person/Docker/Docsify容器构建)
   * [PHP容器构建](/person/Docker/PHP容器构建)

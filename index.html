@@ -61,7 +61,7 @@
 <script src="./asset/PrismJS/components/prism-docker.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-http.js"></script>
 <script src="./asset/docsify-copy-code@2.1.0/dist/docsify-copy-code.min.js"></script>
-<script src="./asset//mermaid/dist/mermaid.min.js"></script>
+<!-- <script src="./asset//mermaid/dist/mermaid.min.js"></script> -->
 <script src="./asset/docsify@4.9.4/lib/plugins/zoom-image.js"></script>
 <!-- <script src="./asset/katex@0.10.0-alpha/katex.min.js"></script> -->
 <script src="./asset/katex@0.16.0/katex.min.js"></script>
@@ -69,24 +69,29 @@
 
 
 <script src="./asset/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
-
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true });
+    window.mermaid = mermaid;
+  </script>
+  <script src="//unpkg.com/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
 
 <script>
 
-  var mermaidOfNumber = 0;
-    mermaid.initialize({ startOnLoad: false });
-    window.$docsify.markdown = {
-        renderer: {
-          code: function (code, lang) {
-            if (lang === "mermaid") {
-              return (
-                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + mermaidOfNumber++, code) + "</div>"
-              );
-            }
-            return this.origin.code.apply(this, arguments);
-          }
-        },
-    };
+  // var mermaidOfNumber = 0;
+  //   mermaid.initialize({ startOnLoad: false });
+  //   window.$docsify.markdown = {
+  //       renderer: {
+  //         code: function (code, lang) {
+  //           if (lang === "mermaid") {
+  //             return (
+  //               '<div class="mermaid">' + mermaid.render('mermaid-svg-' + mermaidOfNumber++, code) + "</div>"
+  //             );
+  //           }
+  //           return this.origin.code.apply(this, arguments);
+  //         }
+  //       },
+  //   };
 
 
     var myPlugin = function (hook,vm) {
