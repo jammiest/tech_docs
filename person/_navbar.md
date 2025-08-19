@@ -7,7 +7,7 @@
 * [Nginx](/person/nginx/)
 * [GIT](/person/GIT/)
 * [算法](/person/Algorithm/)
-* [Python](/person/Python/)
+* [编程](/person/编程/)
 * [正则](/person/正则/)
 * [Shell](/person/Shell/)
 * [OS](/person/OS/)
