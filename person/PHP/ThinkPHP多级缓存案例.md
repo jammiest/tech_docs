@@ -2,7 +2,7 @@
 
 一个基于ThinkPHP的多级缓存方案，包含以下几个层级：
 
-> 基于 users/orders/goods/order_items 表的数据库，更详细表信息参见[数据库表结构设计](person\数据库\README.md)
+> 基于 users/orders/goods/order_items 表的数据库，更详细表信息参见[数据库表结构设计](/person/数据库/README.md)
 
 ## 1. 缓存层级设计
 

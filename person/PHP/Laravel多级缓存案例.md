@@ -3,7 +3,7 @@
 
 一个经典的多级缓存方案，包含以下几个层级：
 
-> 基于 users/orders/goods/order_items 表的数据库，更详细表信息参见[数据库表结构设计](person\数据库\README.md)
+> 基于 users/orders/goods/order_items 表的数据库，更详细表信息参见[数据库表结构设计](/person/数据库/README.md)
 
 1. **浏览器缓存** (HTTP缓存)
 2. **应用层缓存** (Redis/Memcached)
