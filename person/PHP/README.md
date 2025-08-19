@@ -1,142 +1,63 @@
-# PHP7源码编译示例
+# 请求基本流程（PHP开发视角）
 
-## 下载解压
+用户在浏览器输入网址后发生了什么
 
-```shell
-wget https://www.php.net/distributions/php-7.3.5.tar.gz
-tar -xvf php-7.3.5.tar.gz
-cd php-7.3.5
-```
 
-## 安装依赖
+当用户在浏览器输入网址并按下回车后，从PHP开发者的角度来看，会发生以下一系列事件：
 
-```shell
-yum -y install libxml2 libxml2-devel openssl openssl-devel curl-devel libjpeg-devel libpng-devel freetype-devel
-```
+## 1. DNS解析阶段
+- 浏览器检查本地DNS缓存，查找域名对应的IP地址
+- 如果没有缓存，向配置的DNS服务器发起查询请求
+- 最终获取到目标服务器的IP地址
 
-## 配置参考
+## 2. 建立TCP连接
+- 浏览器与服务器通过TCP三次握手建立连接
+- 如果是HTTPS，还会进行SSL/TLS握手过程
 
-参考：<https://www.php.net/manual/zh/configure.about.php>
-或帮助指令：`./configure --help`
+## 3. 发送HTTP请求
+- 浏览器发送HTTP请求到服务器，例如：
+  ```
+  GET /index.php HTTP/1.1
+  Host: example.com
+  ```
 
-```shell
-./buildconf --force
+## 4. Web服务器处理（以Apache/Nginx为例）
+- Web服务器接收请求并检查请求的文件类型
+- 对于.php文件，Web服务器会将请求转发给PHP解释器（通过`PHP-FPM`或`mod_php`）
 
-./configure \
---prefix=/usr/local/php7.3.5 \                              [PHP7安装的根目录]
---exec-prefix=/usr/local/php7.3.5 \
---bindir=/usr/local/php7.3.5/bin \
---sbindir=/usr/local/php7.3.5/sbin \
---includedir=/usr/local/php7.3.5/include \
---libdir=/usr/local/php7.3.5/lib/php \
---mandir=/usr/local/php7.3.5/php/man \
---with-config-file-path=/usr/local/php7.3.5/etc \           [PHP7的配置目录]
---with-mysql-sock=/var/run/mysql/mysql.sock \           [PHP7的Unix socket通信文件]
---with-mcrypt=/usr/include \
---with-mhash \
---with-openssl \
---with-mysql=shared,mysqlnd \                           [PHP7依赖mysql库]              
---with-mysqli=shared,mysqlnd \                          [PHP7依赖mysql库]
---with-pdo-mysql=shared,mysqlnd \                       [PHP7依赖mysql库]
---with-gd \
---with-iconv \
---with-zlib \
---enable-zip \
---enable-inline-optimization \
---disable-debug \
---disable-rpath \
---enable-shared \
---enable-xml \
---enable-bcmath \
---enable-shmop \
---enable-sysvsem \
---enable-mbregex \
---enable-mbstring \
---enable-ftp \
---enable-gd-native-ttf \
---enable-pcntl \
---enable-sockets \
---with-xmlrpc \
---enable-soap \
---without-pear \
---with-gettext \
---enable-session \                                      [允许php会话session]
---with-curl \                                           [允许curl扩展]
---with-jpeg-dir \
---with-freetype-dir \
---enable-opcache \                                      [使用opcache缓存]
---enable-fpm \
---enable-fastcgi \
---with-fpm-user=nginx \                                 [php-fpm的用户]
---with-fpm-group=nginx \                                [php-fpm的用户组]
---without-gdbm \
---with-mcrypt=/usr/local/related/libmcrypt \            [指定libmcrypt位置]
---disable-fileinfo
-```
+## 5. PHP处理阶段
+- PHP解释器执行以下操作：
+  - 解析`php.ini`配置文件
+  - 加载请求的PHP文件
+  - 解析PHP代码，执行编译为`opcode`
+  - 执行`opcode`，生成动态内容
+  - 处理可能涉及的数据库查询、文件操作等
+  - 处理会话（`session_start()`等）
 
-## 编译
+## 6. 生成响应
+- PHP脚本执行完毕后，输出内容（通常是HTML）
+- Web服务器接收PHP的输出，构建完整的HTTP响应
 
-```shell
-make clean && make && make install
-```
+## 7. 返回响应给浏览器
+- Web服务器将响应通过TCP连接发送回浏览器
+- 响应包含状态码、头部和主体内容
 
-## 测试(非必选)
+## 8. 浏览器渲染
+- 浏览器接收响应，解析HTML
+- 处理CSS和JavaScript
+- 渲染页面内容
 
-```shell
-make test
-```
+## 9. 后续交互
+- 可能触发AJAX请求获取更多数据
+- 处理用户交互事件
 
-## 添加路径（非必选）
+## PHP开发者需要关注的重点
+1. **请求生命周期**：理解从请求到响应的完整流程
+2. **超全局变量**：`$_GET`, `$_POST`, `$_SERVER`等的使用
+3. **会话管理**：`session_start()`, `$_SESSION`的使用
+4. **数据库交互**：`PDO/mysqli`连接和查询
+5. **输出缓冲**：`ob_start()`等函数的使用
+6. **错误处理**：`error_reporting`, `try/catch`等
+7. **性能优化**：`opcache`, 查询优化等
 
-打开文件
-
-```shell
-vim /etc/profile
-```
-
-在文件底部新增如下内容 [ /etc/profile ] ：
-
-```/etc/profile
-PATH=$PATH:/usr/local/apache2/php/bin
-export PATH
-```
-
-执行当前shell配置脚本文件
-
-```shell
-source /etc/profile
-```
-
-## 查看php版本信息
-
-```shell
-php -v
--------------------
-# PHP 7.3.5 (cli) (built: May 15 2019 14:14:04) ( NTS )
-# Copyright (c) 1997-2018 The PHP Group
-# Zend Engine v3.3.5, Copyright (c) 1998-2018 Zend Technologies
-```
-
-## 复制配置文件
-
-```shell
-# 将源码中的配置文件复制到安装目录配置目录下
-cp php-7.3.5/php.ini* /usr/local/php7.3.5/etc/
-cp /usr/local/php7.3.5/etc/php.ini-development /usr/local/php7.3.5/etc/php.ini
-```
-
-## 安装pecl
-
-参考：<https://pear.php.net/manual/en/installation.getting.php>
-
-```shell
-wget http://pear.php.net/go-pear.phar
-php go-pear.phar
-```
-
-## 配置pecl
-
-```
-pear config-set php_ini /usr/local/php7.3.5/etc/php.ini
-pecl config-set php_ini /usr/local/php7.3.5/etc/php.ini
-```
+理解这个过程有助于PHP开发者更好地调试和优化应用程序。
