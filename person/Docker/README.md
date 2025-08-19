@@ -98,6 +98,6 @@ CMD ["python", "app.py"]
 
 ## 学习资源
 
-- [官方文档](Play with Docker（在线实验环境）)
+- [官方文档](https://docs.docker.com/get-docker/)
 - [Docker 从入门到实践](https://yeasy.gitbook.io/docker_practice/)
 - [Play with Docker](https://labs.play-with-docker.com/)（在线实验环境）
