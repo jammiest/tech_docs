@@ -11,10 +11,28 @@
   <link rel="stylesheet" href="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/light.css">
 
   <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <!-- 添加 MathJax 公式右对齐样式 -->
+  <style>
+    .math-display {
+      text-align: left;
+      overflow-x: auto;
+    }
+    .MathJax_Display {
+      text-align: left !important;
+    }
+    mjx-container[jax="CHTML"][display="true"] {
+      text-align: left !important;
+      display: inline-block !important;
+      margin: 1em 0 !important;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
   <script>
+    var num = 0;
+    mermaid.initialize({ startOnLoad: false });
+
     window.$docsify = {
       name: '',
       repo: 'https://github.com/jammiest/tech_docs.git',
@@ -25,6 +43,11 @@
       markdown: {
         renderer: {
           code: function(code, lang) {
+            if (lang === "mermaid") {
+              return (
+                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+              );
+            }
             if (lang === "math") {
               return (
                 '<div class="math-display">\\[' + code + '\\]</div>'
