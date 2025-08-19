@@ -57,11 +57,11 @@ server {
   - [MYSQL事务](person/数据库/MYSQL事务.md)
   - [MYSQL错误码和信息](person/数据库/MYSQL错误码和信息.md)
   
-- [消息队列](person/消息队列/README.md)
-  - [README](person/消息队列/README.md)
-  - [RabbitMQ基础概念(一)](person/消息队列/RabbitMQ基础概念\(一\).md)
-  - [RabbitMQ高级特性(二)](person/消息队列/RabbitMQ高级特性\(二\).md)
-  - [RabbitMQ生产端保证消息100投递成功](person/消息队列/RabbitMQ生产端保证消息100投递成功.md)
+- [中间件](person/中间件/README.md)
+  - [README](person/中间件/README.md)
+  - [RabbitMQ基础概念(一)](person/中间件/RabbitMQ基础概念\(一\).md)
+  - [RabbitMQ高级特性(二)](person/中间件/RabbitMQ高级特性\(二\).md)
+  - [RabbitMQ生产端保证消息100投递成功](person/中间件/RabbitMQ生产端保证消息100投递成功.md)
   
 - [文件服务](person/文件服务/README.md)
   
