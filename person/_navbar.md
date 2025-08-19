@@ -1,7 +1,7 @@
 * [面试知识点](/person/面试2025)
 * [PHP](/person/PHP/)
 * [数据库](/person/数据库/)
-* [消息队列](/person/中间件/)
+* [中间件](/person/中间件/)
 * [文件服务](/person/文件服务/)
 * [NoSQL](/person/NoSQL/)
 * [Nginx](/person/nginx/)
