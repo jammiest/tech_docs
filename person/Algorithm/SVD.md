@@ -25,27 +25,27 @@ $$\vec{a'}=U*\vec{a}$$
 
 $$\vec{b'}=U*\vec{b}$$
 
-$$\vec{a'}$$,$$\vec{b'}$$的模：
+$\vec{a'}$$,$$\vec{b'}$的模：
 
 $$\Vert\vec{a'}\Vert=\Vert U*\vec{a}\Vert=\Vert U \Vert*\Vert\vec{a}\Vert=\Vert\vec{a}\Vert=1$$
 
 $$\Vert\vec{b'}\Vert=\Vert U*\vec{b}\Vert=\Vert U \Vert*\Vert\vec{b}\Vert=\Vert\vec{b}\Vert=1$$
 
-由上式可知$$\vec{a'}$$和$$\vec{b'}$$的模都为1。
+由上式可知$\vec{a'}$和$\vec{b'}$的模都为1。
 
-$$\vec{a'}$$和$$\vec{b'}$$的内积：
+$\vec{a'}$和$\vec{b'}$的内积：
 
 $$\vec{a'}^T*\vec{b'}=(U*\vec{a})^T*(U*\vec{b})=\vec{a}^TU^TU\vec{b}\Rightarrow\vec{a'}^T*\vec{b'}=\vec{a}^T*\vec{b} (1)$$
 
 由上式可知，正交变换前后的内积相等。
 
-$$\vec{a'}$$和$$\vec{b'}$$的夹角$$\theta'$$
+$\vec{a'}$和$\vec{b'}$的夹角$\theta'$
 
 $$\Large \cos\theta'=\frac{\vec{a'}^T*\vec{b'}}{\Vert\vec{a}\Vert*\Vert\vec{b'}\Vert} (2)$$
 
 $$\Large \cos\theta=\frac{\vec{a'}^T*\vec{b}}{\Vert\vec{a}\Vert*\Vert\vec{b}\Vert} (3)$$
 
-比较（2）式和（3）式得：正交变换前后的夹角相等，即：$$\theta=\theta'$$
+比较（2）式和（3）式得：正交变换前后的夹角相等，即：$\theta=\theta'$
 
 因此，正交变换的性质可用下图来表示：
 
@@ -57,7 +57,7 @@ $$\Large \cos\theta=\frac{\vec{a'}^T*\vec{b}}{\Vert\vec{a}\Vert*\Vert\vec{b}\Ver
 
 2）正交变换不改变向量的夹角。
 
-如果向量$$\vec{a}$$和$$\vec{b}$$是基向量，那么正交变换的结果如下图：
+如果向量$\vec{a}$和$\vec{b}$是基向量，那么正交变换的结果如下图：
 
 ![例3](./SVD_03.png)
 
@@ -69,9 +69,9 @@ $$\Large \cos\theta=\frac{\vec{a'}^T*\vec{b}}{\Vert\vec{a}\Vert*\Vert\vec{b}\Ver
 
 $$A=U\varSigma U^{-1} (2.1)$$
 
-其中U是正交矩阵，$$\varSigma$$是对角矩阵。
+其中U是正交矩阵，$\varSigma$是对角矩阵。
 
-为了可视化特征值分解，假设A是2×2的对称矩阵，$$U=(\mu_1,\mu_2)$$，$$U=(\lambda_1,\lambda_2) （2.1）$$式展开为：
+为了可视化特征值分解，假设A是2×2的对称矩阵，$U=(\mu_1,\mu_2)$$，$$U=(\lambda_1,\lambda_2) （2.1）$式展开为：
 
 $$A\mu_1=\lambda_1\mu_1$$
 
@@ -112,7 +112,7 @@ $$(Av_i)^T(av_j)=0$$ (3.1)
 
 $$v_i^TA^TAv_j=0$$  (3.2)
 
-当 $$v_i$$ 是 $$A^T A$$ 的特征值时，有
+当 $v_i$ 是 $A^T A$ 的特征值时，有
 
 $$(A^TA)v_i=\lambda v_i$$
 

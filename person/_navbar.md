@@ -5,7 +5,10 @@
 * [NoSQL](/person/NoSQL/)
 * [Nginx](/person/nginx/)
 * [GIT](/person/GIT/)
-* [算法](/person/Algorithm/)
+* 算法
+  * [算法](/person/Algorithm/)
+  * [数学基础](/person/Algorithm/数学基础/)
+  * [科学理论](/person/Algorithm/科学理论/)
 * [编程](/person/编程/)
 * [正则](/person/正则/)
 * [Shell](/person/Shell/)
