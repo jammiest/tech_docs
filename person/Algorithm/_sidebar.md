@@ -17,3 +17,10 @@
 * [拟合问题](/person/Algorithm/拟合问题)
 * [复变函数](/person/Algorithm/复变函数)
 * [高斯模糊](/person/Algorithm/高斯模糊)
+* [AI文生图像](/person/Algorithm/AI文生图像)
+* [AI文生视频](/person/Algorithm/AI文生视频) 
+* [CLIP模型.AI图像视频](/person/Algorithm/CLIP模型)
+* [扩散模型.AI图像视频](/person/Algorithm/扩散模型)
+* [生成式对抗网络.AI图像视频](/person/Algorithm/生成式对抗网络)
+* 
+* 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
@@ -11,15 +12,17 @@
   <link rel="stylesheet" href="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/light.css">
 
   <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <!-- 添加 MathJax 公式右对齐样式 -->
+  <!-- 添加 MathJax 公式右对齐样式 -->
   <style>
     .math-display {
       text-align: left;
       overflow-x: auto;
     }
+
     .MathJax_Display {
       text-align: left !important;
     }
+
     mjx-container[jax="CHTML"][display="true"] {
       text-align: left !important;
       display: inline-block !important;
@@ -27,6 +30,7 @@
     }
   </style>
 </head>
+
 <body>
   <div id="app"></div>
   <script>
@@ -42,24 +46,26 @@
       maxLevel: 4,
       markdown: {
         renderer: {
-          code: function(code, lang) {
+          code: function (code, lang) {
             if (lang === "mermaid") {
               return (
                 '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
               );
             }
-            if (lang === "math") {
-              return (
-                '<div class="math-display">\\[' + code + '\\]</div>'
-              );
-            }
+            // if (lang === "math") { //有问题，暂时不用
+              
+            //   console.log(code)
+            //   return (
+            //     '$$ ' + code + ' $$'
+            //   );
+            // }
             return this.origin.code.apply(this, arguments);
           }
         }
       },
       plugins: [
-        function(hook) {
-          hook.doneEach(function() {
+        function (hook) {
+          hook.doneEach(function () {
             if (window.MathJax) {
               MathJax.typesetPromise();
             }
@@ -67,8 +73,8 @@
         }
       ],
       latex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        inlineMath: [['$', '$'], ['\\(', '\\)'], ['$$', '$$'], ['\\[', '\\]']], // default
+        displayMath: [['\\[', '\\]'], ['$$', '$$']],               // default
       },
       toc: {
         tocMaxLevel: 5,
@@ -82,8 +88,12 @@
   <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
 
+
+  <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
+
   <!-- 代码高亮，缺什么就加对应的一条 -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>  
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>  
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>  
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>  
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-mermaid.min.js"></script>  
@@ -91,7 +101,8 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>   
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>  
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script> 
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>  
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.ini.js"></script> 
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script> -->
+
 </body>
+
 </html>
