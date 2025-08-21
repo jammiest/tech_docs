@@ -1,0 +1,18 @@
+* Linux
+  * [README](/person/编程语言/Shell/)
+  * [firewalld-cmd](/person/编程语言/Shell/防火墙)
+  * [Grep](/person/编程语言/Shell/Grep)
+  * [Sed](/person/编程语言/Shell/Sed)
+  * [Awk](/person/编程语言/Shell/Awk)
+  * [vim常用命令](/person/编程语言/Shell/vim常用命令)
+  * [History](/person/编程语言/Shell/History)
+  * [Kill&Killall](/person/编程语言/Shell/Kill&Killall)
+  * [Curl](/person/编程语言/Shell/Curl)
+  * [输出重定向](/person/编程语言/Shell/std_redirect)
+  * [BashShell配置](/person/编程语言/Shell/BashShell配置)
+  * [Shell脚本配色](/person/编程语言/Shell/Shell脚本配色)
+  * [Shell编程大全](/person/编程语言/Shell/Shell编程大全)
+  * [Shell脚本示例-趣玩算法](/person/编程语言/Shell/Shell脚本示例-趣玩算法)
+  * [Shell脚本示例-部署git代码](/person/编程语言/Shell/Shell脚本示例-部署git代码)
+* Windows
+  * [PowerShell](/person/编程语言/Shell/PowerShell)

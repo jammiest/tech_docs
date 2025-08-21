@@ -1,0 +1,16 @@
+* [返回](/person/编程语言/)
+---
+* [README](/person/编程语言/PHP/)
+* [PHP知识点速记](/person/编程语言/PHP/PHP知识点速记)
+* [Laravel框架入门](/person/编程语言/PHP/Laravel框架入门.md)
+* [Laravel多级缓存案例](/person/编程语言/PHP/Laravel多级缓存案例)
+* [ThinkPHP多级缓存案例](/person/编程语言/PHP/ThinkPHP多级缓存案例)
+* [Composer自动加载PSR-0及PSR-4](/person/编程语言/PHP/Composer自动加载PSR-0及PSR-4)
+* [PHP7.3.5编译](/person/编程语言/PHP/PHP7.3.5编译.md)
+* [源码编译](/person/编程语言/PHP/源码编译)
+* [PHP代码查询匹配](/person/编程语言/PHP/PHP代码查询匹配)
+* [PHP杂项](/person/编程语言/PHP/PHP杂项)
+* [Xdebug远程调试](/person/编程语言/PHP/Xdebug远程调试)
+* [Laravel.消息队列](/person/编程语言/PHP/Laravel.消息队列)
+* [RabbitMQ](/person/编程语言/PHP/RabbitMQ)
+

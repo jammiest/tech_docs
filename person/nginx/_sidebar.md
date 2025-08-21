@@ -1,8 +1,0 @@
-* [README](/person/nginx/)
-* [Win本地环境搭建](/person/nginx/Win本地环境搭建)
-* [虚拟机本地环境搭建](/person/nginx/虚拟机本地环境搭建)
-* [Nginx变量](/person/nginx/Nginx变量)
-* [Nginx Location](/person/nginx/location)
-* [HTTP状态码](/person/nginx/HTTP状态码)
-* [条件判断及运算符](/person/nginx/条件判断及运算符)
-* [Nginx负载均衡](/person/nginx/Nginx负载均衡)

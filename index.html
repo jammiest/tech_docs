@@ -35,7 +35,7 @@
   <div id="app"></div>
   <script>
     var num = 0;
-    mermaid.initialize({ startOnLoad: false });
+    mermaid.initialize({ startOnLoad: true });
 
     window.$docsify = {
       name: '',
@@ -48,8 +48,10 @@
         renderer: {
           code: function (code, lang) {
             if (lang === "mermaid") {
+              console.log(code)
               return (
-                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+                // '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+                '<div class="mermaid">' + code + "</div>"
               );
             }
             // if (lang === "math") { //有问题，暂时不用
@@ -102,6 +104,7 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>  
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script> 
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
 
 </body>
 
