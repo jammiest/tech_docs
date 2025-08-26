@@ -1,2 +1,5 @@
 * [简介](/person/编程语言/Cpp/)
 * [C++语法速记](/person/编程语言/Cpp/CPP语法速记.md)
+* [C标准库之glibc](/person/编程语言/Cpp/C标准库之glibc.md)
+* [C标准库之musl](/person/编程语言/Cpp/C标准库之musl.md)
+* [C标准库对比（musl与glibc功能对比） copy](/person/编程语言/Cpp/C标准库对比（musl与glibc功能对比）.md)

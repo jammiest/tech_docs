@@ -3,6 +3,7 @@
 ## 🌐 系统架构演进全景
 
 ### 架构发展里程碑
+
 ```mermaid
 timeline
     title 架构演进时间轴

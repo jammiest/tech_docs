@@ -8,7 +8,7 @@
 
 消息确认，是指生产者投递消息后，如果Broker收到消息，则会给我们生产者一个应答。生产者进行接受应答，用来确认消息这条是否正常发送到Broker，这种方式也是消息的可靠性投递的核心保障！
 
-![RabbitMQ高级特性(二).生产者Confirm消息确认机制](RabbitMQ高级特性(二).生产端Confirm消息确认机制.png)
+![RabbitMQ高级特性(二).生产者Confirm消息确认机制](figures/RabbitMQ高级特性(二).生产端Confirm消息确认机制.png)
 
 ### 如何实现Confirm确认消息
 
@@ -80,7 +80,7 @@ public class Producer {
 
 运行结果
 
-![RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果.png](RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果.png)
+![RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果.png](figures/RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果.png)
 
 注意
 
@@ -153,7 +153,7 @@ public class Consumer {
 
 **运行结果**
 
-![RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果2.png](RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果2.png)
+![RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果2.png](figures/RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果2.png)
 
 ## 生产者Return返回消息机制
 
@@ -167,7 +167,7 @@ Return Listener用于处理一些不可路由的消息
 
 ### 实现流程图
 
-![RabbitMQ高级特性(二).生产端Return返回消息机制](RabbitMQ高级特性(二).生产端Return返回消息机制.png)
+![RabbitMQ高级特性(二).生产端Return返回消息机制](figures/RabbitMQ高级特性(二).生产端Return返回消息机制.png)
 
 在API中配置项：
 
@@ -315,11 +315,11 @@ public class Consumer {
 
 Consumer
 
-![RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果3](RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果3.png)
+![RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果3](figures/RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果3.png)
 
 **Producer**，其中routingKey 为 return.error的消息无法路由，被Return Listener监听到
 
-![RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果4](RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果4.png)
+![RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果4](figures/RabbitMQ高级特性(二).生产端Confirm消息确认机制-运行结果4.png)
 
 ## 消费者限流
 
@@ -462,23 +462,23 @@ public class Consumer {
 
 1. 第一次我们注释掉 手动 ack给RabbitMQ应答
 
-![RabbitMQ高级特性(二).消费端限流-手动注释RabbitMQ应答](RabbitMQ高级特性(二).消费端限流-手动注释RabbitMQ应答.png)
+![RabbitMQ高级特性(二).消费端限流-手动注释RabbitMQ应答](figures/RabbitMQ高级特性(二).消费端限流-手动注释RabbitMQ应答.png)
 
 运行结果
 
 *发现一直卡在第一条消息，因为未给RabbitMQ手动应答，所以RabbitMQ认为消费者还未消费完，不推送新的消息*
 
-![RabbitMQ高级特性(二).消费端限流-运行结果1.png](RabbitMQ高级特性(二).消费端限流-运行结果1.png)
+![RabbitMQ高级特性(二).消费端限流-运行结果1.png](figures/RabbitMQ高级特性(二).消费端限流-运行结果1.png)
 
 2. 第二次开启手动应答
 
-![RabbitMQ高级特性(二).消费端限流-手动开启RabbitMQ应答.png](RabbitMQ高级特性(二).消费端限流-手动开启RabbitMQ应答.png)
+![RabbitMQ高级特性(二).消费端限流-手动开启RabbitMQ应答.png](figures/RabbitMQ高级特性(二).消费端限流-手动开启RabbitMQ应答.png)
 
 运行结果
 
 *所有消息依次消费*
 
-![RabbitMQ高级特性(二).消费端限流-运行结果2.png](RabbitMQ高级特性(二).消费端限流-运行结果2.png)
+![RabbitMQ高级特性(二).消费端限流-运行结果2.png](figures/RabbitMQ高级特性(二).消费端限流-运行结果2.png)
 
 ## 消费端的ack和重回队列
 
@@ -642,7 +642,7 @@ public class Consumer {
 
 最后3条消息，发nack给Broker，并不断重回队列尾端，broker再将其推给消费端，一直循环消费失败
 
-![RabbitMQ高级特性(二).消费端的ack和重回队列-运行结果.png](RabbitMQ高级特性(二).消费端的ack和重回队列-运行结果.png)
+![RabbitMQ高级特性(二).消费端的ack和重回队列-运行结果.png](figures/RabbitMQ高级特性(二).消费端的ack和重回队列-运行结果.png)
 
 ## TTL队列/消息
 

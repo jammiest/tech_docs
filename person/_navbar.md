@@ -5,6 +5,7 @@
   * [Java](/person/编程语言/Java/)
   * [C++](/person/编程语言/Cpp/)
   * [Shell](/person/编程语言/Shell/)
+  * [JS/TS](/person/编程语言/Web-Frontend/)
 
 * [数据库](/person/数据库/)
   * [MySQL](/person/数据库/MySQL/)
@@ -28,6 +29,7 @@
 * [计算机科学](/person/计算机科学/)
   * [算法](/person/计算机科学/算法/)
   * [数据结构](/person/计算机科学/数据结构/)
+  * [设计模式](/person/计算机科学/设计模式/)
   * [操作系统](/person/计算机科学/操作系统/)
   * [计算机网络](/person/计算机科学/计算机网络/)
   * [数学基础](/person/计算机科学/数学基础/)
@@ -43,5 +45,3 @@
   * [人工智能](/person/前沿技术/人工智能/)
   * [区块链](/person/前沿技术/区块链/)
   * [物联网](/person/前沿技术/物联网/)
-
-* [其他](/person/杂项/)

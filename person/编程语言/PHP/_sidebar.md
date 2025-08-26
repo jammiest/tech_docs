@@ -1,16 +1,39 @@
 * [返回](/person/编程语言/)
----
-* [README](/person/编程语言/PHP/)
-* [PHP知识点速记](/person/编程语言/PHP/PHP知识点速记)
-* [Laravel框架入门](/person/编程语言/PHP/Laravel框架入门.md)
-* [Laravel多级缓存案例](/person/编程语言/PHP/Laravel多级缓存案例)
-* [ThinkPHP多级缓存案例](/person/编程语言/PHP/ThinkPHP多级缓存案例)
-* [Composer自动加载PSR-0及PSR-4](/person/编程语言/PHP/Composer自动加载PSR-0及PSR-4)
-* [PHP7.3.5编译](/person/编程语言/PHP/PHP7.3.5编译.md)
+* ---
+* **语法**
+* [原理](/person/编程语言/PHP/)
+* [PHP语法速记](/person/编程语言/PHP/PHP语法速记)
+* [PHP函数速查](/person/编程语言/PHP/PHP函数速查)
+* ---
+* **管理**
 * [源码编译](/person/编程语言/PHP/源码编译)
-* [PHP代码查询匹配](/person/编程语言/PHP/PHP代码查询匹配)
-* [PHP杂项](/person/编程语言/PHP/PHP杂项)
+* [PHP Composer](/person/编程语言/PHP/PHPComposer)
+* [Composer速查](/person/编程语言/PHP/composer速查手册大全.md)
 * [Xdebug远程调试](/person/编程语言/PHP/Xdebug远程调试)
-* [Laravel.消息队列](/person/编程语言/PHP/Laravel.消息队列)
+* [mysqli](/person/编程语言/PHP/mysqli.md)
+* [Redis扩展](/person/编程语言/PHP/Redis扩展.md)
+* ---
+* **PHP框架**
+  *  **Laravel**
+  * [框架入门](/person/编程语言/PHP/Laravel框架入门.md)
+  * [多级缓存案例](/person/编程语言/PHP/Laravel多级缓存案例)
+  * [框架MySQL调优](/person/编程语言/PHP/Laravel框架MySQL调优.md)
+  * [消息队列](/person/编程语言/PHP/Laravel消息队列)
+  * [RabbitMQ消息队列](/person/编程语言/PHP/Laravel_RabbitMQ消息队列.md)
+  * [RabbitMQ消息模式大全](/person/编程语言/PHP/Laravel_RabbitMQ消息模式大全.md)
+  *  **ThinkPHP**
+  * [框架入门](/person/编程语言/PHP/ThinkPHP框架入门.md)
+  * [多级缓存案例](/person/编程语言/PHP/ThinkPHP多级缓存案例)
+  * [MySQL调优](/person/编程语言/PHP/ThinkPHP框架MySQL调优.md)
+  * **Swoole**
+  * [介绍](/person/编程语言/PHP/Swoole介绍.md)
+  * [工作原理](/person/编程语言/PHP/Swoole工作原理深度解析.md)
+  * [基础用法](/person/编程语言/PHP/Swoole基础用法.md)
+  * [高级用法](/person/编程语言/PHP/Swoole高级用法.md)
+  * [终级用法](/person/编程语言/PHP/Swoole终级用法.md)
+  * [常见的错误及解决方案](/person/编程语言/PHP/Swoole常见错误及解决方案.md)
+  * [经典实战案例](/person/编程语言/PHP/Swoole经典实战案例.md)
+  * [游戏实战案例](/person/编程语言/PHP/Swoole游戏实战案例.md)
+* ---
 * [RabbitMQ](/person/编程语言/PHP/RabbitMQ)
 

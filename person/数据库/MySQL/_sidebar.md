@@ -1,12 +1,20 @@
 * 个人
   * [READE](/person/数据库/MySQL/)
+  * [MySQL速查](/person/数据库/MySQL/MySQL速查)
   * [MySQL数据类型及操作](/person/数据库/MySQL/MySQL数据类型及操作)
   * [MySQL调优](/person/数据库/MySQL/MySQL调优)
-  * [Laravel框架MySQL调优](/person/数据库/MySQL/Laravel框架MySQL调优)
-  * [MYSQL主从架构搭建](/person/数据库/MySQL/MYSQL主从架构搭建)
+  * [MYSQL主从架构](/person/数据库/MySQL/MYSQL主从架构)
   * [用户权限管理](/person/数据库/MySQL/MYSQL用户权限管理-grant)
   * [存储例程语法](/person/数据库/MySQL/MYSQL存储例程语法)
-  * [事务](/person/数据库/MySQL/MYSQL事务)
+  * [MySQL事务全面解析](/person/数据库/MySQL/MySQL事务全面解析)
   * [MYSQL错误码和信息](/person/数据库/MySQL/MYSQL错误码和信息)
   * [术语](/person/数据库/MySQL/术语)
+  * ---
+  * 经典案例
+    * [电商系统数据库设计文档](/person/数据库/MySQL/电商系统数据库设计文档)
+    * [电商系统核心表结构DDL](/person/数据库/MySQL/电商系统核心表结构DDL)
+    * [电商系统数据库数据填充](/person/数据库/MySQL/电商系统数据库数据填充)
+    * [电商系统存储过程生成百万数据](/person/数据库/MySQL/电商系统存储过程生成百万数据)
+    * [电商系统数据库常见查询](/person/数据库/MySQL/电商系统数据库常见查询.md)
+    * [电商系统数据库特殊查询](/person/数据库/MySQL/电商系统数据库特殊查询.md)
 * [返回](/)
