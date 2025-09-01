@@ -11,3 +11,4 @@
 * [RocketMQ支持的消息队列类型及对应用途](/person/系统架构/中间件/RocketMQ支持的消息队列类型及对应用途.md)
 * [Kafka支持的消息队列类型及对应用途](/person/系统架构/中间件/Kafka支持的消息队列类型及对应用途.md)
 * [FastDFS文件服务器](/person/系统架构/中间件/FastDFS文件服务器)
+* [OAuth2.0](/person/系统架构/中间件/OAuth2.0)

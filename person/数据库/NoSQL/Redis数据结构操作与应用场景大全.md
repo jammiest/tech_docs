@@ -115,6 +115,7 @@
 - `ZSCORE key member`：获取元素分数
 - `ZRANK key member`：获取元素排名（升序）
 - `ZREVRANK key member`：获取元素排名（降序）
+- `ZSCAN key cursor [MATCH pattern] [COUNT count]`：渐进式遍历，`cursor `游标值，首次遍历从0开始
 - `ZINCRBY key increment member`：增加元素分数
 
 ### 范围操作
