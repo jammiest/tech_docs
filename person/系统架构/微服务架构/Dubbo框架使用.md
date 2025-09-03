@@ -7,29 +7,8 @@ Apache Dubbo 是一款高性能的 Java RPC 框架，专门为微服务架构设
 ## Dubbo 架构体系
 
 ### 核心架构概览
-```mermaid
-graph TB
-    A[Dubbo 架构体系] --> B[服务治理层]
-    A --> C[通信层]
-    A --> D[协议层]
-    A --> E[序列化层]
-    
-    B --> F[注册中心]
-    B --> G[配置中心]
-    B --> H[元数据中心]
-    
-    C --> I[Netty 通信]
-    C --> J[长连接管理]
-    C --> K[线程池优化]
-    
-    D --> L[Dubbo 协议]
-    D --> M[gRPC 协议]
-    D --> N[REST 协议]
-    
-    E --> O[Hessian2]
-    E --> P[Kryo]
-    E --> Q[Protobuf]
-```
+
+![](./figures/Dubbo核心架构概览.png)
 
 ## 快速开始
 

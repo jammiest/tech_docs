@@ -34,7 +34,7 @@
     * [日志管理](/person/系统架构/Docker/日志管理.md)
     * [安全最佳实践](/person/系统架构/Docker/安全实践.md)
   * 故障排除
-    * [Virtualbox文件权限不足问题](/person/系统架构/Docker/Virtualbox文件权限不足问题问题)
+    * [Virtualbox文件权限不足问题](/person/系统架构/Docker/Virtualbox文件权限不足问题)
     * [常见问题排查](/person/系统架构/Docker/常见问题排查.md)
     * [性能优化](/person/系统架构/Docker/性能优化.md)
   * 开发环境

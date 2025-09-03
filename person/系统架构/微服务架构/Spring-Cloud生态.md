@@ -7,41 +7,8 @@ Spring Cloud 为微服务架构提供了一套完整的解决方案，涵盖了�
 ## Spring Cloud 生态体系
 
 ### 核心组件架构
-```mermaid
-graph TB
-    A[Spring Cloud 生态体系] --> B[服务发现与注册]
-    A --> C[配置管理]
-    A --> D[服务通信]
-    A --> E[服务容错]
-    A --> F[API网关]
-    A --> G[安全控制]
-    A --> H[监控追踪]
-    
-    B --> I[Eureka]
-    B --> J[Consul]
-    B --> K[Nacos]
-    
-    C --> L[Config Server]
-    C --> M[Nacos Config]
-    C --> N[Apollo]
-    
-    D --> O[OpenFeign]
-    D --> P[RestTemplate]
-    D --> Q[gRPC]
-    
-    E --> R[Hystrix]
-    E --> S[Resilience4j]
-    E --> T[Sentinel]
-    
-    F --> U[Gateway]
-    F --> V[Zuul]
-    
-    G --> W[OAuth2]
-    G --> X[Security]
-    
-    H --> Y[Sleuth]
-    H --> Z[Zipkin]
-```
+
+![](./figures/SpringCloud生态体系.png)
 
 ## 服务发现与注册
 
