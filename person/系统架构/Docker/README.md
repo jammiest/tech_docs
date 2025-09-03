@@ -24,13 +24,8 @@ Docker 利用 Linux 内核的三大能力：
 3. **UnionFS**（联合文件系统）→ 镜像分层存储，节省空间  
 
 ### **(2) 架构图解**  
-```mermaid  
-graph TB  
-    Client[Docker Client] -->|命令| Daemon[Docker Daemon]  
-    Daemon -->|管理| Containers  
-    Daemon -->|构建/拉取| Images  
-    Images --> Registry[Docker Hub/私有仓库]  
-```  
+
+![](./figures/docker架构图.jpg)
 
 ### **(3) 核心概念**  
 | 概念          | 说明                          | 类比              |  

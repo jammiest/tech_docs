@@ -75,8 +75,9 @@ $logger = LoggerFactory::createLogger('file');
 
 示例：clone 关键字实现深拷贝/浅拷贝。
 
-### 结构型模式（Structural Patterns）
-适配器模式（Adapter）
+## 结构型模式（Structural Patterns）
+
+### 适配器模式（Adapter）
 
 作用：将不兼容的接口转换为可兼容的接口。
 

@@ -23,4 +23,4 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 4、使用截图
 
-![git-comitizen使用截图](commitizen.git-cz-am.01.png)
+![git-comitizen使用截图](figures/commitizen.git-cz-am.01.png)
