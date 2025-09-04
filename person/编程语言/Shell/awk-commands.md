@@ -46,7 +46,7 @@ whatis awk gawk dgawk pgawk igawk
 
 ### 理解awk的工作原理
 
-![awk原理图01](./awk原理图01.png)
+![awk原理图01](./figures/awk原理图01.png)
 
 **Read**
 

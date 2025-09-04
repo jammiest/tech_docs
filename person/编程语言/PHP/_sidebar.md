@@ -2,44 +2,43 @@
 * ---
 * **语法**
 * [原理](/person/编程语言/PHP/)
-* [PHP语法速记](/person/编程语言/PHP/PHP语法速记)
-* [PHP函数速查](/person/编程语言/PHP/PHP函数速查)
+* [PHP语法速记](/person/编程语言/PHP/php-syntax-cheatsheet)
+* [PHP函数速查](/person/编程语言/PHP/php-functions-reference)
 * ---
 * **管理**
-* [源码编译](/person/编程语言/PHP/源码编译)
-* [PHP Composer](/person/编程语言/PHP/PHPComposer)
-* [Composer速查](/person/编程语言/PHP/composer速查手册大全.md)
-* [Xdebug远程调试](/person/编程语言/PHP/Xdebug远程调试)
-* [mysqli](/person/编程语言/PHP/mysqli.md)
-* [Redis扩展](/person/编程语言/PHP/Redis扩展.md)
+* [源码编译](/person/编程语言/PHP/php-source-compilation)
+* [PHP Composer](/person/编程语言/PHP/php-composer)
+* [Composer速查](/person/编程语言/PHP/composer-cheatsheet)
+* [Xdebug远程调试](/person/编程语言/PHP/xdebug-remote-debugging)
+* [mysqli](/person/编程语言/PHP/php-mysqli)
+* [Redis扩展](/person/编程语言/PHP/php-redis-extension)
 * ---
 * **PHP框架**
   *  **Laravel**
-  * [框架入门](/person/编程语言/PHP/Laravel框架入门.md)
-  * [多级缓存案例](/person/编程语言/PHP/Laravel多级缓存案例)
-  * [框架MySQL调优](/person/编程语言/PHP/Laravel框架MySQL调优.md)
-  * [消息队列](/person/编程语言/PHP/Laravel消息队列)
-  * [RabbitMQ消息队列](/person/编程语言/PHP/Laravel_RabbitMQ消息队列.md)
-  * [RabbitMQ消息模式大全](/person/编程语言/PHP/Laravel_RabbitMQ消息模式大全.md)
+  * [框架入门](/person/编程语言/PHP/laravel-getting-started)
+  * [多级缓存案例](/person/编程语言/PHP/laravel-multi-level-caching)
+  * [框架MySQL调优](/person/编程语言/PHP/laravel-mysql-optimization)
+  * [消息队列](/person/编程语言/PHP/laravel-queue)
+  * [RabbitMQ消息队列](/person/编程语言/PHP/laravel-rabbitmq-queue)
+  * [RabbitMQ消息模式大全](/person/编程语言/PHP/laravel-rabbitmq-patterns)
   *  **ThinkPHP**
-  * [框架入门](/person/编程语言/PHP/ThinkPHP框架入门.md)
-  * [多级缓存案例](/person/编程语言/PHP/ThinkPHP多级缓存案例)
-  * [MySQL调优](/person/编程语言/PHP/ThinkPHP框架MySQL调优.md)
+  * [框架入门](/person/编程语言/PHP/thinkphp-getting-started)
+  * [多级缓存案例](/person/编程语言/PHP/thinkphp-multi-level-caching)
+  * [MySQL调优](/person/编程语言/PHP/thinkphp-mysql-optimization)
   * **Swoole**
-  * [介绍](/person/编程语言/PHP/Swoole介绍.md)
-  * [工作原理](/person/编程语言/PHP/Swoole工作原理深度解析.md)
-  * [基础用法](/person/编程语言/PHP/Swoole基础用法.md)
-  * [高级用法](/person/编程语言/PHP/Swoole高级用法.md)
-  * [终级用法](/person/编程语言/PHP/Swoole终级用法.md)
-  * [常见的错误及解决方案](/person/编程语言/PHP/Swoole常见错误及解决方案.md)
-  * [经典实战案例](/person/编程语言/PHP/Swoole经典实战案例.md)
-  * [游戏实战案例](/person/编程语言/PHP/Swoole游戏实战案例.md)
+  * [介绍](/person/编程语言/PHP/swoole-introduction)
+  * [工作原理](/person/编程语言/PHP/swoole-deep-dive)
+  * [基础用法](/person/编程语言/PHP/swoole-basics)
+  * [高级用法](/person/编程语言/PHP/swoole-advanced)
+  * [终级用法](/person/编程语言/PHP/swoole-mastery)
+  * [常见的错误及解决方案](/person/编程语言/PHP/swoole-troubleshooting)
+  * [经典实战案例](/person/编程语言/PHP/swoole-practical-cases)
+  * [游戏实战案例](/person/编程语言/PHP/swoole-game-development)
   * **框架总结**
-  * [PHP主流框架介绍](/person/编程语言/PHP/PHP主流框架介绍.md)
+  * [PHP主流框架介绍](/person/编程语言/PHP/php-frameworks-overview)
   * ---
 * **Composer包**
-  *  [PHP-DI](/person/编程语言/PHP/php-di.md)
-  *  [PSR-Container](/person/编程语言/PHP/PSR-Container.md)
+  *  [PHP-DI](/person/编程语言/PHP/php-dependency-injection)
+  *  [PSR-Container](/person/编程语言/PHP/psr-container)
 * ---
-* [RabbitMQ](/person/编程语言/PHP/RabbitMQ)
-
+* [RabbitMQ](/person/编程语言/PHP/rabbitmq-guide)

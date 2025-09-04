@@ -13,4 +13,4 @@ echo -e '37 \t\t[\e[37;1mok\e[0m]'
 ```
 
 > 脚本执行  
-> ![shell 脚本颜色](Shell_脚本颜色.jpg)
+> ![shell 脚本颜色](./figures/Shell_脚本颜色.jpg)

@@ -1,288 +1,237 @@
-# CI/CD 工具与技术全景解析
+# CI/CD 工具与技术文档库
 
-持续集成与持续交付（CI/CD）是现代DevOps实践的核心支柱，以下是主流CI/CD工具与技术的深度剖析：
+## 📚 概述
 
-## 1. CI/CD工具生态图谱
+本文档包含完整的 CI/CD 工具链和技术栈文档，涵盖从代码管理到生产部署的全流程实践指南。
 
-### 工具分类矩阵
+## 🛠️ 工具链分类
 
-| 类型 | 本地部署方案 | SaaS解决方案 | 云原生方案 |
-|------|--------------|--------------|------------|
-| 传统CI | Jenkins | Travis CI | - |
-| 现代CI/CD | GitLab CI | CircleCI | Tekton |
-| 云原生CD | Argo CD | Spinnaker | Flux |
-| 混合方案 | TeamCity | GitHub Actions | AWS CodePipeline |
+### 代码质量与静态分析
+- **PHPStan**: PHP 静态分析工具
+- **PHP-CS-Fixer**: PHP 代码风格修复
+- **GolangCI-Lint**: Go 语言 lint 聚合器
+- **Staticcheck**: Go 高级静态分析
 
-## 2. Jenkins 深度解析
+### 构建与打包
+- **Go Build Optimization**: Go 构建性能优化
+- **Go Modules**: Go 模块依赖管理
+- **GoReleaser**: Go 项目自动化发布
+- **Docker Compose**: 容器化构建部署
 
-### 核心架构
+### 测试与验证
+- **Go Test**: Go 测试框架集成
+- **Trivy**: 容器安全扫描
 
-```
-Master Node
-├─ 任务调度
-├─ 插件管理
-└─ 用户界面
-  ↑
-Agent Nodes (执行构建)
-```
+### 部署与发布
+- **PHP Deployment**: PHP 项目部署策略
+- **Gitea + Drone**: 自托管 CI/CD 方案
+- **Tencent CODING**: 腾讯云 DevOps 平台
 
-### Pipeline语法示例
+### 安全与合规
+- **Trivy**: 漏洞扫描与安全审计
+- 各工具的安全集成章节
 
-```groovy
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                sh 'mvn clean package'
-                archiveArtifacts artifacts: 'target/*.jar'
-            }
-        }
-        stage('Test') {
-            parallel {
-                stage('Unit Test') {
-                    steps { sh 'mvn test' }
-                }
-                stage('Integration Test') {
-                    steps { sh 'mvn verify -Pintegration' }
-                }
-            }
-        }
-        stage('Deploy') {
-            when { branch 'main' }
-            steps {
-                sh 'kubectl apply -f k8s/'
-            }
-        }
-    }
-}
-```
+## 🚀 快速开始
 
-### 性能优化公式
-
-$$
-\text{最优执行器数} = \frac{\text{CPU核心数}}{1 - \text{系统预留比率}}
-$$
-
-## 3. GitLab CI/CD 体系
-
-### .gitlab-ci.yml 配置
+### 基础 CI/CD 流水线示例
 
 ```yaml
-stages:
-  - build
-  - test
-  - deploy
+# .github/workflows/ci-cd.yml
+name: CI/CD Pipeline
 
-variables:
-  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-
-build-job:
-  stage: build
-  image: maven:3.8-jdk-11
-  script:
-    - mvn package -DskipTests
-  artifacts:
-    paths:
-      - target/*.jar
-
-e2e-test:
-  stage: test
-  needs: [build-job]
-  rules:
-    - if: $CI_COMMIT_BRANCH == "main"
-  script:
-    - mvn verify -Pe2e
-```
-
-### 流水线效率指标
-
-$$
-\text{流水线效率} = \frac{\text{有效构建时间}}{\text{总流水线时间}} \times 100\%
-$$
-
-## 4. GitHub Actions 工作流
-
-### 工作流配置示例
-
-```yaml
-name: CI Pipeline
 on: [push, pull_request]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run tests
+        run: |
+          echo "Running test suite..."
+          # 添加您的测试命令
+
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        java: [ '11', '17' ]
+    needs: test
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK
-      uses: actions/setup-java@v3
-      with:
-        java-version: ${{ matrix.java }}
-    - run: mvn verify
-      
+      - uses: actions/checkout@v3
+      - name: Build application
+        run: |
+          echo "Building application..."
+          # 添加您的构建命令
+
   deploy:
+    runs-on: ubuntu-latest
     needs: build
     if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to production
+        run: |
+          echo "Deploying to production..."
+          # 添加您的部署命令
+```
+
+## 📖 详细指南
+
+### 1. Go 项目 CI/CD
+
+参考文档：
+- `go-build-optimization.md` - 构建性能优化
+- `go-modules.md` - 依赖管理
+- `go-test.md` - 测试集成
+- `golangci-lint.md` - 代码质量
+- `goreleaser.md` - 自动化发布
+
+### 2. PHP 项目 CI/CD
+
+参考文档：
+- `phpstan.md` - 静态分析
+- `php-cs-fixer.md` - 代码风格
+- `php-deployment.md` - 部署策略
+
+### 3. 容器化部署
+
+参考文档：
+- `docker-compose.md` - 容器编排
+- `trivy.md` - 安全扫描
+
+### 4. 自托管方案
+
+参考文档：
+- `gitea-drone-practice.md` - Gitea + Drone
+
+### 5. 云平台集成
+
+参考文档：
+- `tencent-coding.md` - 腾讯云 CODING
+
+## 🔧 工具配置示例
+
+### Go 项目完整配置
+
+```yaml
+# .github/workflows/go-ci.yml
+name: Go CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
     runs-on: ubuntu-latest
     steps:
-    - run: kubectl rollout restart deploy/app
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.20'
+      - run: go test -race ./...
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.20'
+      - run: go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+      - run: golangci-lint run
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+      - run: gosec ./...
 ```
 
-### 缓存优化策略
+### PHP 项目完整配置
 
 ```yaml
-- name: Cache Maven packages
-  uses: actions/cache@v3
-  with:
-    path: ~/.m2/repository
-    key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-    restore-keys: |
-      ${{ runner.os }}-m2-
+# .github/workflows/php-ci.yml
+name: PHP CI
+
+on: [push, pull_request]
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+      - run: composer install
+      - run: vendor/bin/phpstan analyse
+      - run: vendor/bin/php-cs-fixer fix --dry-run
+
+  test:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+      - run: composer install
+      - run: vendor/bin/phpunit
 ```
 
-## 5. 云原生CI/CD方案
+## 🎯 最佳实践
 
-### Tekton 核心概念
+### 1. 流水线设计原则
+- **快速反馈**: 保持流水线执行时间在 10 分钟以内
+- **原子性**: 每个阶段独立且可重试
+- **可观测性**: 完整的日志和监控
+- **安全性**: 密钥管理和漏洞扫描
 
-```
-Pipeline → PipelineRun
-  ↑
-Task → TaskRun
-  ↑
-Step (容器执行单元)
-```
+### 2. 环境策略
+- **环境隔离**: 开发、测试、预生产、生产环境严格隔离
+- **配置管理**: 环境特定的配置通过环境变量管理
+- **回滚机制**: 自动化回滚策略
 
-### Argo CD 同步策略
+### 3. 监控与优化
+- **性能指标**: 跟踪构建时间、成功率等指标
+- **成本优化**: 合理使用计算资源
+- **持续改进**: 定期评审和优化流水线
 
-```yaml
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-spec:
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-    - CreateNamespace=true
-  source:
-    repoURL: https://github.com/example/app.git
-    targetRevision: HEAD
-    path: k8s/
-```
+## 📊 监控指标
 
-## 6. 多环境发布策略
+| 指标类别 | 具体指标 | 目标值 |
+|---------|---------|--------|
+| **构建性能** | 平均构建时间 | < 10分钟 |
+| **测试质量** | 测试覆盖率 | > 80% |
+| **部署频率** | 每日部署次数 | > 1次 |
+| **可靠性** | 部署成功率 | > 95% |
+| **安全性** | 漏洞数量 | 0严重漏洞 |
 
-### 部署策略对比
+## 🔍 故障排除
 
-| 策略 | 原理 | 风险 | 回滚难度 |
-|------|------|------|----------|
-| 蓝绿部署 | 全量切换 | 高 | 容易 |
-| 金丝雀发布 | 渐进式 | 低 | 中等 |
-| 滚动更新 | 批次替换 | 中 | 困难 |
-| 功能开关 | 逻辑控制 | 最低 | 容易 |
+常见问题及解决方案：
 
-### 金丝雀发布公式
+1. **构建超时**
+   ```yaml
+   # 增加超时时间
+   timeout-minutes: 30
+   ```
 
-$$
-\text{流量分配比例} = \frac{\text{新版本实例数}}{\text{总实例数}} \times 100\%
-$$
+2. **依赖下载慢**
+   ```yaml
+   # 使用国内镜像
+   env:
+     GOPROXY: https://goproxy.cn,direct
+   ```
 
-## 7. 安全合规实践
-
-### 安全扫描集成
-
-```groovy
-pipeline {
-    stages {
-        stage('Security Scan') {
-            parallel {
-                stage('SAST') {
-                    steps { runSonarQubeAnalysis() }
-                }
-                stage('DAST') {
-                    steps { runOWASPZAP() }
-                }
-            }
-        }
-    }
-}
-```
-
-### 合规检查项
-
-```
-1. 构建环境隔离
-2. 凭证安全管理
-3. 制品签名验证
-4. 审计日志留存
-```
-
-## 8. 性能优化指南
-
-### 构建缓存策略
-
-| 缓存类型 | 适用场景 | 实现方式 |
-|----------|----------|----------|
-| 依赖缓存 | 包管理工具 | 预加载到工作区 |
-| 构建缓存 | 中间产物 | 增量构建 |
-| Docker层缓存 | 镜像构建 | --cache-from |
-
-### 并行化优化
-
-$$
-\text{理论加速比} = \frac{1}{(1-P) + \frac{P}{N}}
-$$
-其中P为可并行化比例，N为并行度
-
-## 9. 监控与可观测性
-
-### 关键监控指标
-
-| 类别 | 指标 | 健康阈值 |
-|------|------|----------|
-| 资源 | CPU/Memory使用率 | <70% |
-| 流水线 | 平均执行时间 | 行业基准±20% |
-| 质量 | 构建成功率 | >95% |
-| 效率 | 部署频率 | 团队目标值 |
-
-### Prometheus监控示例
-
-```yaml
-- job_name: 'jenkins'
-  metrics_path: '/prometheus'
-  static_configs:
-    - targets: ['jenkins:8080']
-```
-
-## 10. 新兴趋势
-
-### 未来发展方向
-
-```
-AI驱动的CI/CD → 
-策略即代码(PaC) → 
-多云部署自动化 →
-无服务器(Serverless)构建环境
-```
-
-### GitOps工作流演进
-
-```
-传统CI/CD → GitOps 1.0 (声明式) → 
-GitOps 2.0 (策略驱动) →
-自治系统(AutoOps)
-```
-
-根据2023年DevOps现状报告，顶级团队的平均部署频率达到每天多次，而CI/CD成熟度与组织绩效呈强正相关（相关系数0.87）。工具选型建议考虑：
-1. 与现有工具链集成能力
-2. 学习曲线与社区支持
-3. 安全合规特性
-4. 多云支持程度
-
-现代CI/CD平台正向着智能化、平台工程和开发者体验优化的方向发展，建议关注：
-- 动态配置管理(Dynamic Configuration)
-- 渐进式交付(Progressive Delivery)
-- 价值流管理(VSM)集成
+3. **资源不足**
+   ```yaml
+   # 增加资源
+   resources:
+     cpu: 4
+     memory: 8Gi
+   ```
